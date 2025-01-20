@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, th, button, a {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    color:#181a26;
+}
+
+p, td, input {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color:#181a26;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+
+    background:
+        url(https://www.marvelrivals.com/pc/zt/20241218111923/img/bg_f97bd621.jpg) no-repeat top/100% auto,
+        url(https://www.marvelrivals.com/pc/zt/20241218111923/img/bg2_e7b2292e.jpg) no-repeat bottom/100% auto;
+    
+    background-color: #c7cede;
+}
+
+    main > div {
+        max-width: 1000px;
+    }
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    position: relative;
+    width: 100%;
+    height: 3.55vw;
+    color: rgb(220, 220, 220);
+}
+
+.nav-left {
+    height: 3.55vw;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo {
+    height: 100%;
+    position: relative;
+}
+
+.nav-logo img {
+    height:100%;
+    width: auto;
+    margin: 0px 50px;
+}
+
+ul {
+    display: flex;
+    list-style-type: none;
+}
+
+ul li {
+    margin-right: 50px;
+}
+
+ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+ul li a:hover {
+    color: #ffcc00;
+}
+
+ul li a.active {
+    color: #ffcc00;
+}
+
+.nav-info {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.giant-button {
+    background-image: url('https://www.marvelrivals.com/pc/gw/20241128194803/img/go-steam_d8bfd4cf.png');
+    background-size: 100% 100%;
+    color: #1c1b18;
+    border: none;
+    font-size: 22px;
+    padding:0px 20px 0px 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    height: 3.55vw;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    transition: color 0.3s;
+}
+
+.giant-button:hover {
+    color: black;
+}
+
+
+
+/* Title */
+.main-title {
+    margin-top:20%;
+    margin-bottom:50px;
+}
+
+    .main-title h1 {
+        font-size: 3rem;
+        text-transform: uppercase;
+    }
+
+/* Form */
+.main-form {
+    width:100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 20px;
+  }
+  
+  .search-form {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    background-color: #f7f7f7;
+  }
+  
+  .search-input {
+    padding: 8px;
+    font-size: 16px;
+    border: none;
+    width: 250px;
+    margin-right:5px;
+    background-color:rgb(236, 236, 236);
+    border-bottom: 2px solid #a5abcd;
+  }
+  
+  .search-button {
+    background-image: url('https://www.marvelrivals.com/pc/zt/20241218111923/img/djms_nav_btn_h_fbb45847.png');
+    background-repeat: no-repeat;
+    text-transform: uppercase;
+    border: none;
+    letter-spacing: 1px;
+    font-size: 16px;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+/* Table */
+.achievements-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    table-layout: fixed;
+}
+  
+  .achievements-table th,
+  .achievements-table td {
+    padding: 12px;
+    text-align: left;
+  }
+
+.achievements-table th {
+    text-transform: uppercase;
+    color:white;
+    padding: 25px 12px;
+}
+.achievements-table td:nth-child(1),
+.achievements-table th:nth-child(1) {
+    width: 200px;
+}
+.achievements-table td:nth-last-child(2),
+.achievements-table th:nth-last-child(2) {
+    width: 100px;
+    text-align: center;
+}
+.achievements-table td:last-child,
+.achievements-table th:last-child {
+    width: 100px;
+    word-wrap: break-word;
+}
+  
+  .achievements-table thead {
+    background-color: #181a26;
+    color: white;
+  }
+  
+  .achievements-table tbody tr {
+    background-color: rgb(225, 230, 236);
+    border-bottom:2px solid #c6cceb;
+  }
+  
+  .achievement-icon {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+  }

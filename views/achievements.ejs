@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="/style.css">
+
+  <title>Achievements</title>
+</head>
+<body>
+    <main>
+        <!-- Navigation Bar -->
+        <nav>
+            <div class="nav-left">
+                <a href="/" class="nav-logo">
+                    <img src="https://www.marvelrivals.com/pc/zt/20241218111923/data/logo.png?image_process=format,png" alt="Marvel Rivals Logo">
+                </a>
+                <ul>
+                    <li><a href="/" class="nav-link">Home</a></li>
+                    <li><a href="/achievements" class="nav-link active">Achievements</a></li>
+                    <li><a href="/about" class="nav-link">About</a></li>
+                </ul>
+            </div>
+        
+            <div class="nav-info">
+                <a href="https://www.marvelrivals.com/" class="giant-button">Play the Game</a>
+            </div>
+        </nav>
+
+        <!-- Main Title -->
+        <div class="main-title">
+            <h1>Achievements (HEROIC JOURNEY)</h1>
+            <p>This site provides a way to view, search, and organize achievements outside of the game, making it easier to track and complete them effectively.</p>
+        </div>
+
+        <!-- Search Bar Form -->
+        <div class="main-form">
+            <form action="/achievements" method="GET" class="search-form">
+                <input type="text" name="search" placeholder="Search achievements" value="<%= search || '' %>" class="search-input">
+                <button type="submit" class="search-button">
+                    Search
+                </button>
+            </form>
+        </div>
+
+        <!-- Display Achievements -->
+        <div class="main-content">
+            <% if (achievements.length > 0) { %>
+                <table class="achievements-table">
+                    <thead>
+                        <tr>
+                            <th>Achievement</th>
+                            <th>Objective</th>
+                            <th>Points Rewarded</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% achievements.forEach(achievement => { %>
+                            <tr>
+                                <td><b><%= achievement.title %></b></td>
+                                <td><%= achievement.objective %></td>
+                                <td><%= achievement.points %></td>
+                                <td>
+                                    <% if (achievement.points === 5) { %>
+                                        <img src="bronze_achievement.webp" alt="Bronze Achievement" class="achievement-icon">
+                                    <% } else if (achievement.points === 10) { %>
+                                        <img src="silver_achievement.webp" alt="Silver Achievement" class="achievement-icon">
+                                    <% } %>
+                                </td>
+                            </tr>
+                        <% }) %>
+                    </tbody>
+                </table>
+            <% } else { %>
+                <p>No achievements found.</p>
+            <% } %>
+        </div>      
+    </main>
+</body>
+</html>
